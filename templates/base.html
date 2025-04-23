@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div style="display: flex; justify-content: center; gap: 50px; font-family: 'Poppins', sans-serif;">
+            <h1><a href="/" style="font-weight: bolder; font-size: 1.5em; text-decoration: none;">Home</a></h1>
+            <h2><a href="/about" style="font-weight: bolder; font-size: 1.5em; text-decoration: none;">About</a></h2>
+            <div class="dropdown" style="position: relative;">
+                <h2><a href="#" onclick="toggleDropdown(event)" style="font-weight: bolder; font-size: 1.5em; text-decoration: none;">Gallery</a></h2>
+                <div class="dropdown-content" style="display: none; position: absolute; background-color: white; border: 1px solid #ccc; padding: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 200px;">
+                <a href="/zendaism_art" style="display: block; padding: 5px 10px; text-decoration: none; color: black; font-weight: bold; font-size: 1.2em;">Zendaism Art</a>
+                <a href="/category" style="display: block; padding: 5px 10px; text-decoration: none; color: black; font-weight: bold; font-size: 1.2em;">Categories</a>
+                <a href="/sold" style="display: block; padding: 5px 10px; text-decoration: none; color: black; font-weight: bold; font-size: 1.2em;">Exhibitions</a>             
+               
+            </div>
+            </div>
+            <h2><a href="/commissions" style="font-weight: bolder; font-size: 1.5em; text-decoration: none;">Commissions</a></h2>
+            </div>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Keith Zenda</p>
+    </footer>
+    <script>
+        function toggleDropdown(event) {
+        event.preventDefault();
+        const dropdownContent = event.target.closest('.dropdown').querySelector('.dropdown-content');
+        dropdownContent.style.display = dropdownContent.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
