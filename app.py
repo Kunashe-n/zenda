@@ -28,9 +28,9 @@ def commissions():
 def contact():
     return render_template('contact.html')
 
-@app.route('/category')
+@app.route('/potraits')
 def category():
-    return render_template('category.html')
+    return render_template('potraits.html')
 
 @app.route('/sold')
 def sold():
@@ -39,6 +39,19 @@ def sold():
 @app.route('/zendaism_art')
 def zendaism_art():
     return render_template('zendaism_art.html')
+
+@app.route('/egg')
+def egg():
+    return render_template('egg.html')
+
+@app.route('/scrap')
+def scrap():
+    return render_template('scrap.html')
+
+@app.route('/social')
+def social():
+    return render_template('social.html')
+
 
 @app.route('/view')
 def view():
