@@ -36,6 +36,10 @@ def category():
 def sold():
     return render_template('sold.html')
 
+@app.route('/landscape')
+def landscape():
+    return render_template('landscape.html')
+
 @app.route('/zendaism_art')
 def zendaism_art():
     return render_template('zendaism_art.html')
