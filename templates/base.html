@@ -13,15 +13,28 @@
             <h2><a href="/about" style="font-weight: bolder; font-size: 1.5em; text-decoration: none;">About</a></h2>
             <div class="dropdown" style="position: relative;">
                 <h2><a href="#" onclick="toggleDropdown(event)" style="font-weight: bolder; font-size: 1.5em; text-decoration: none;">Categories</a></h2>
-                <div class="dropdown-content" style="display: none; position: absolute; background-color: white; border: 1px solid #ccc; padding: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 150px;">
-                <a href="/zendaism_art" style="display: block; padding: 5px; text-decoration: none; color: black; font-weight: bold; font-size: 1em;">Zendaism Art</a>
-                <a href="/scrap" style="display: block; padding: 5px; text-decoration: none; color: black; font-weight: bold; font-size: 1em;">Scrap Metal Art</a>
-                <a href="/egg" style="display: block; padding: 5px; text-decoration: none; color: black; font-weight: bold; font-size: 1em;">The Egg series</a>
-                <a href="/social" style="display: block; padding: 5px; text-decoration: none; color: black; font-weight: bold; font-size: 1em;">Social Lifestyle Art</a>
-                <a href="/potraits" style="display: block; padding: 5px; text-decoration: none; color: black; font-weight: bold; font-size: 1em;">Potraits</a>
-                <a href="/sold" style="display: block; padding: 5px; text-decoration: none; color: black; font-weight: bold; font-size: 1em;">Exhibitions</a>             
+                <div class="dropdown-content" style="display: none; position: absolute; background-color: white; border: 1px solid #ccc; padding: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 150px; max-height: 200px; overflow-y: auto;">
+                    <a href="/zendaism_art" style="display: block; padding: 5px; text-decoration: none; color: black; font-weight: bold; font-size: 1em;">Zendaism Art</a>
+                    <a href="/scrap" style="display: block; padding: 5px; text-decoration: none; color: black; font-weight: bold; font-size: 1em;">Scrap Metal Art</a>
+                    <a href="/egg" style="display: block; padding: 5px; text-decoration: none; color: black; font-weight: bold; font-size: 1em;">The Egg series</a>
+                    <a href="/social" style="display: block; padding: 5px; text-decoration: none; color: black; font-weight: bold; font-size: 1em;">Social Lifestyle Art</a>
+                    <a href="/potraits" style="display: block; padding: 5px; text-decoration: none; color: black; font-weight: bold; font-size: 1em;">Potraits</a>
+                    <a href="/landscape" style="display: block; padding: 5px; text-decoration: none; color: black; font-weight: bold; font-size: 1em;">Landscape Art</a>
+                    <a href="/sold" style="display: block; padding: 5px; text-decoration: none; color: black; font-weight: bold; font-size: 1em;">Exhibitions</a>
+                   <button onclick="scrollDropdown('up')" style="display: block; width: 100%; padding: 5px; background-color: #f0f0f0; border: none; cursor: pointer;">Scroll Up</button>
+                    <button onclick="scrollDropdown('down')" style="display: block; width: 100%; padding: 5px; background-color: #f0f0f0; border: none; cursor: pointer;">Scroll Down</button>
                 </div>
             </div>
+            <script>
+                function scrollDropdown(direction) {
+                    const dropdownContent = document.querySelector('.dropdown-content');
+                    if (direction === 'up') {
+                        dropdownContent.scrollBy({ top: -50, behavior: 'smooth' });
+                    } else if (direction === 'down') {
+                        dropdownContent.scrollBy({ top: 50, behavior: 'smooth' });
+                    }
+                }
+            </script>
             <h2><a href="/commissions" style="font-weight: bolder; font-size: 1.5em; text-decoration: none;">Commissions</a></h2>
             </div>
         </nav>
