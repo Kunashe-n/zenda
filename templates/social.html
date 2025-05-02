@@ -506,6 +506,64 @@ style="background-color: #f0f0f0; border: none; padding: 10px; cursor: pointer; 
 </div>
 </div>
 </div>
+<div class="gallery" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+    <div style="width: 80%; margin-bottom: 20px;">
+    <img src="{{ url_for('static', filename='uploads/IMG-20250501-WA0019.jpg') }}" alt="Art 1" style="width: 100%;">
+    <div style="margin-top: 10px;">
+    <button onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none';" style="background-color: #f0f0f0; border: none; padding: 10px; cursor: pointer;">
+    Details
+    </button>
+    <div style="display: none; margin-top: 5px; padding: 10px; border: 1px solid #ccc; background-color: #fafafa;">
+    <p>Title: Warrior</p>
+    <p>Medium: Mixed media on canvas</p>
+    <p>Size: 90x60cm</p>
+    <p>Year: 2025</p>
+    <a href="https://wa.me/263776330869?text=I%20am%20interested%20in%20buying%20a%20print%20of%20Warrior.%20Can%20we%20negotiate?" style="text-decoration: none;">
+    <button style="background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+    Buy Print
+    </button>
+    </a>
+    </div>
+    <div style="margin-top: 10px;">
+    <button 
+    onclick="toggleCart(this, this.dataset.title, )" 
+    data-title="Warrior" 
+    style="background-color: #f0f0f0; border: none; padding: 10px; cursor: pointer; display: flex; align-items: center;">
+    <span>Add to Cart</span>
+    <span style="margin-left: 10px; color: green; display: none;">✔</span>
+    </button>
+    </div>
+    </div>
+    </div>
+    <div class="gallery" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+        <div style="width: 80%; margin-bottom: 20px;">
+        <img src="{{ url_for('static', filename='uploads/IMG-20250501-WA0017.jpg') }}" alt="Art 1" style="width: 100%;">
+        <div style="margin-top: 10px;">
+        <button onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none';" style="background-color: #f0f0f0; border: none; padding: 10px; cursor: pointer;">
+        Details
+        </button>
+        <div style="display: none; margin-top: 5px; padding: 10px; border: 1px solid #ccc; background-color: #fafafa;">
+        <p>Title: Weapon</p>
+        <p>Medium: Mixed media on canvas</p>
+        <p>Size: 90x60cm</p>
+        <p>Year: 2025</p>
+        <a href="https://wa.me/263776330869?text=I%20am%20interested%20in%20buying%20a%20print%20of%20Weapon.%20Can%20we%20negotiate?" style="text-decoration: none;">
+        <button style="background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+        Buy Print
+        </button>
+        </a>
+        </div>
+        <div style="margin-top: 10px;">
+        <button 
+        onclick="toggleCart(this, this.dataset.title, )" 
+        data-title="Weapon" 
+        style="background-color: #f0f0f0; border: none; padding: 10px; cursor: pointer; display: flex; align-items: center;">
+        <span>Add to Cart</span>
+        <span style="margin-left: 10px; color: green; display: none;">✔</span>
+        </button>
+        </div>
+        </div>
+        </div>
     </div>
             <!-- Submit Button -->
 <div id="submitContainer" style="text-align: center; margin-top: 20px; display: none;">
