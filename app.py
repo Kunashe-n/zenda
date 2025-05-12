@@ -60,6 +60,9 @@ def social():
 @app.route('/view')
 def view():
     return render_template('view.html')
+    @app.route('/favicon.ico')
+def favicon():
+    return send_from_directory('static', 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 @app.route('/process_payment', methods=['POST'])
 def process_payment():
